@@ -1,0 +1,24 @@
+{
+    "name": "davidyell/tdg-tech-day",
+    "type": "project",
+    "require": {
+        "phpstan/phpstan": "^1.10",
+        "illuminate/collections": "^10.43",
+        "fakerphp/faker": "^1.23"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Yell",
+            "email": "david.yell@asset.tv"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TdgTechDay\\": "src/"
+        }
+    },
+    "scripts": {
+        "phpstan": "phpstan analyse --level=9 src/"
+    }
+}
