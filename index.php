@@ -5,12 +5,14 @@ declare(strict_types=1);
 require './vendor/autoload.php';
 
 use TdgTechDay\CoachTrip\CoachTrip;
+use TdgTechDay\CoachTrip\Sculptor;
 
 $trip = new CoachTrip();
 $trip->setDriver();
 $trip->collectPassengers(3);
 
-$trip->addPassenger(new \TdgTechDay\CoachTrip\Sculptor('', '', -5));
+$passenger = new Sculptor('', '', -5);
+$trip->addPassenger($passenger);
 
 var_dump(
     $trip->getCoach()->driver,

@@ -19,6 +19,6 @@
         }
     },
     "scripts": {
-        "phpstan": "phpstan analyse --level=9 src/"
+        "phpstan": "phpstan analyse --level=9 src/ index.php"
     }
 }

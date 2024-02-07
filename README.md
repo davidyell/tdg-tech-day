@@ -17,3 +17,7 @@ This is a small demo project to implement a number of types to help better under
 ## Run
 
 Just execute with `php index.php` from the project folder.
+
+## Check types
+
+`composer phpstan`
