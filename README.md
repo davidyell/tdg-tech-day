@@ -14,9 +14,13 @@ This is a small demo project to implement a number of types to help better under
 
 * `composer install`
 
-## Run
+## Run the Coach Trip
 
-Just execute with `php index.php` from the project folder.
+Execute with `php coach-trip.php` from the project folder.
+
+## Load a Pokemon
+
+Execute with `php pokemon.php` from the project folder.
 
 ## Check types
 

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace TdgTechDay\CoachTrip;
+namespace TdgTechDay\CoachTrip\People;
 
 /**
  * @see https://refactoring.guru/design-patterns/factory-method

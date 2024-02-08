@@ -4,12 +4,20 @@ declare(strict_types=1);
 
 namespace TdgTechDay\CoachTrip;
 
+use TdgTechDay\CoachTrip\People\AbstractPerson;
+use TdgTechDay\CoachTrip\People\CoachDriver;
+use TdgTechDay\CoachTrip\People\TruckDriver;
+
 /**
  * @phpstan-type CoachSpecs array{ seats: int, wheels: int, mpg: float }
+ * @phpstan-type Driver CoachDriver|TruckDriver
  */
 class Coach
 {
-    public CoachDriver|TruckDriver $driver;
+    /**
+     * @var Driver
+     */
+    public $driver;
 
     /**
      * @var CoachSpecs

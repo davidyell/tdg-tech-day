@@ -5,7 +5,18 @@ namespace TdgTechDay\CoachTrip;
 
 use Faker\Factory;
 use Faker\Generator;
+use TdgTechDay\CoachTrip\People\AbstractPerson;
+use TdgTechDay\CoachTrip\People\CoachDriver;
+use TdgTechDay\CoachTrip\People\Doctor;
+use TdgTechDay\CoachTrip\People\Electrician;
+use TdgTechDay\CoachTrip\People\Engineer;
+use TdgTechDay\CoachTrip\People\PersonFactory;
+use TdgTechDay\CoachTrip\People\Sculptor;
+use TdgTechDay\CoachTrip\People\TruckDriver;
 
+/**
+ * @phpstan-import-type Driver from Coach
+ */
 class CoachTrip
 {
     protected Coach $coach;
@@ -23,11 +34,15 @@ class CoachTrip
 
     /**
      * We need a driver
+     *
+     * @param ?Driver $driver
      */
-    public function setDriver(): void
+    public function setDriver($driver = null): void
     {
-        /** @var CoachDriver $driver */
-        $driver = $this->factory->make(CoachDriver::class, ['firstName' => 'Ray', 'lastName' => 'Finkle', 'age' => 52]);
+        if ($driver === null) {
+            /** @var CoachDriver $driver */
+            $driver = $this->factory->make(CoachDriver::class, ['firstName' => 'Ray', 'lastName' => 'Finkle', 'age' => 52]);
+        }
 
         $this->coach->driver = $driver;
     }
