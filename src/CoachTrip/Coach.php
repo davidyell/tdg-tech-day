@@ -9,7 +9,7 @@ use TdgTechDay\CoachTrip\People\CoachDriver;
 use TdgTechDay\CoachTrip\People\TruckDriver;
 
 /**
- * @phpstan-type CoachSpecs array{ seats: int, wheels: int, mpg: float }
+ * @phpstan-type CoachSpecs array{ seats: positive-int, wheels: positive-int, mpg: float }
  * @phpstan-type Driver CoachDriver|TruckDriver
  */
 class Coach
@@ -32,6 +32,14 @@ class Coach
      * @var AbstractPerson[]
      */
     public array $passengers;
+
+    /**
+     * @param CoachSpecs $coachSpecs
+     */
+    public function __construct(array $coachSpecs)
+    {
+        $this->specifications = $coachSpecs;
+    }
 
     /**
      * @return CoachSpecs

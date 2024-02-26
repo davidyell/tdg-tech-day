@@ -16,6 +16,7 @@ use TdgTechDay\CoachTrip\People\TruckDriver;
 
 /**
  * @phpstan-import-type Driver from Coach
+ * @phpstan-import-type CoachSpecs from Coach
  */
 class CoachTrip
 {
@@ -27,7 +28,9 @@ class CoachTrip
 
     public function __construct()
     {
-        $this->coach = new Coach();
+        /** @var CoachSpecs $coachSpecs */
+        $coachSpecs = ['seats' => 75, 'wheels' => 4, 'mpg' => 65];
+        $this->coach = new Coach($coachSpecs);
         $this->factory = new PersonFactory();
         $this->faker = Factory::create();
     }
