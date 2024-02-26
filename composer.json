@@ -2,12 +2,13 @@
     "name": "davidyell/tdg-tech-day",
     "type": "project",
     "require": {
-        "phpstan/phpstan": "^1.10",
-        "illuminate/collections": "^10.43",
         "fakerphp/faker": "^1.23",
         "guzzlehttp/guzzle": "^7.8",
-        "symfony/serializer": "^7.0",
-        "symfony/property-access": "^7.0"
+        "illuminate/collections": "^10.43",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^11.0",
+        "symfony/property-access": "^7.0",
+        "symfony/serializer": "^7.0"
     },
     "license": "MIT",
     "authors": [
@@ -18,10 +19,15 @@
     ],
     "autoload": {
         "psr-4": {
-            "TdgTechDay\\": "src/"
+            "TdgTechDay\\": "src/",
+            "TdgTechDay\\Test\\": "tests/"
         }
     },
     "scripts": {
-        "phpstan": "phpstan analyse --level=9 src/ *.php"
+        "phpstan": "phpstan analyse",
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
     }
 }

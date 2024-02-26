@@ -8,12 +8,15 @@ use TdgTechDay\CoachTrip\CoachTrip;
 use TdgTechDay\CoachTrip\People\Doctor;
 use TdgTechDay\CoachTrip\People\Sculptor;
 
+$s = ['seats' => 0, 'wheels' => -3, 'mpg' => false];
+$c = new \TdgTechDay\CoachTrip\Coach($s);
+
 $trip = new CoachTrip();
 $trip->setDriver();
-$trip->collectPassengers(0);
+$trip->collectPassengers(-5);
 
-$passengerOne = new Sculptor('', '', -5);
-$passengerTwo = new Doctor('Gilbert', 'Grape', 0);
+$passengerOne = new Sculptor('', '', -3);
+$passengerTwo = new Doctor('Gilbert', 'Grape', 34);
 $trip->addPassenger($passengerOne);
 $trip->addPassenger($passengerTwo);
 
